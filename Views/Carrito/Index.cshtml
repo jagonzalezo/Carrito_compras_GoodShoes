@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Carrito";
+    // Por ahora mostraremos valores estáticos como ejemplo.
+    decimal subtotal = 90.00M; // ejemplo
+    decimal iva = subtotal * 0.13M;
+    decimal total = subtotal + iva;
+}
+
+<h2 class="mb-3">Carrito de Compras</h2>
+
+<table class="table align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Ejemplo: cuando haya model, recorrer items -->
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <img src="~/images/zapato1.jpg" width="64" class="me-3" />
+                    <div>
+                        <div><strong>Zapato Deportivo</strong></div>
+                        <small class="text-muted">Talla 40</small>
+                    </div>
+                </div>
+            </td>
+            <td>$45.00</td>
+            <td>2</td>
+            <td>$90.00</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-between align-items-center mt-3">
+    <div>
+        <!-- botones sin lógica (cuando implementes, enlazarán a acciones) -->
+        <a asp-controller="Carrito" asp-action="Limpiar" class="btn btn-danger me-2">Limpiar carrito</a>
+        <a asp-controller="Tienda" asp-action="Index" class="btn btn-secondary">Seguir comprando</a>
+    </div>
+
+    <div class="text-end">
+        <p class="mb-1">Subtotal: <strong>@subtotal.ToString("C")</strong></p>
+        <p class="mb-1">IVA (13%): <strong>@iva.ToString("C")</strong></p>
+        <h5>Total: <strong>@total.ToString("C")</strong></h5>
+
+        <a asp-controller="Factura" asp-action="Index" class="btn btn-success mt-2">Pagar</a>
+    </div>
+</div>

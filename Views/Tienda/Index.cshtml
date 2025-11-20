@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Tienda";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Tienda de Zapatos</h2>
+
+    <div class="d-flex justify-content-center mb-3">
+        <select class="form-select w-25 me-3">
+            <option>Niños</option>
+            <option>Adultos</option>
+        </select>
+        <select class="form-select w-25 me-3">
+            <option>Hombre</option>
+            <option>Mujer</option>
+        </select>
+        <select class="form-select w-25">
+            <option>Talla 2</option>
+            <option>Talla 3</option>
+            <option>Talla 4</option>
+            <option>Talla 5</option>
+            <option>Talla 6</option>
+            <option>Talla 7</option>
+            <option>Talla 8</option>
+            <option>Talla 9</option>
+            <option>Talla 10</option>
+            <option>Talla 11</option>
+        </select>
+    </div>
+
+    <div class="row">
+        @for (int i = 1; i <= 6; i++)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" class="card-img-top p-4" alt="Zapato">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Zapato @i</h5>
+                        <p>$@(i * 10).00</p>
+                        <a asp-controller="Carrito" asp-action="Index" class="btn btn-primary">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

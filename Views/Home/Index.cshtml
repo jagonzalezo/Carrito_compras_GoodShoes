@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="d-flex flex-column align-items-center justify-content-center" style="min-height:60vh;">
+    <img src="~/img/Logo_shoes.png" alt="GoodShoes" width="150" class="mb-3" />
+    <h1>Bienvenido a GoodShoes</h1>
+    <p class="lead mb-4">Tu tienda de zapatos</p>
+
+    <div>
+        <a class="btn btn-primary btn-lg me-2" asp-controller="Login" asp-action="Index">Ingresar</a>
+        <a class="btn btn-success btn-lg" asp-controller="Login" asp-action="Registrar">Registrarse</a>
+    </div>
+</div>
