@@ -7,3 +7,5 @@ namespace Carrito_compras_zapatos.Models
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
+
+//Proyecto : Carrito_Compras_Zapatos 2025

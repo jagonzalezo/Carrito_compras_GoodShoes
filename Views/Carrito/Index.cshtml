@@ -1,7 +1,8 @@
-﻿@{
+﻿//Carrito de ejemplo
+@{
     ViewData["Title"] = "Carrito";
-    // Por ahora mostraremos valores estáticos como ejemplo.
-    decimal subtotal = 90.00M; // ejemplo
+    
+    decimal subtotal = 90.00M; 
     decimal iva = subtotal * 0.13M;
     decimal total = subtotal + iva;
 }
@@ -18,14 +19,14 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Ejemplo: cuando haya model, recorrer items -->
+      
         <tr>
             <td>
                 <div class="d-flex align-items-center">
-                    <img src="~/images/zapato1.jpg" width="64" class="me-3" />
+                    <img src="~/img/niño/zapato_niño.png" width="64" class="me-3" />
                     <div>
-                        <div><strong>Zapato Deportivo</strong></div>
-                        <small class="text-muted">Talla 40</small>
+                        <div><strong>Zapato niño</strong></div>
+                        <small class="text-muted">Talla 4</small>
                     </div>
                 </div>
             </td>
@@ -38,7 +39,7 @@
 
 <div class="d-flex justify-content-between align-items-center mt-3">
     <div>
-        <!-- botones sin lógica (cuando implementes, enlazarán a acciones) -->
+        
         <a asp-controller="Carrito" asp-action="Limpiar" class="btn btn-danger me-2">Limpiar carrito</a>
         <a asp-controller="Tienda" asp-action="Index" class="btn btn-secondary">Seguir comprando</a>
     </div>

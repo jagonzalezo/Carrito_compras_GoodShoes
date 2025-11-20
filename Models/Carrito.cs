@@ -16,3 +16,5 @@ namespace Carrito_Compras_Zapatos.Models
         public ICollection<CarritoDetalle>? Items { get; set; }
     }
 }
+
+//Proyecto : Carrito_Compras_Zapatos 2025

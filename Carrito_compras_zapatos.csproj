@@ -19,4 +19,12 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\adulto\hombre.PNG" />
+    <None Include="wwwroot\img\adulto\mujer.PNG" />
+    <None Include="wwwroot\img\niño\zapato_niña.PNG" />
+    <None Include="wwwroot\img\niño\zapato_niño.PNG" />
+    <None Include="wwwroot\img\Logo_shoes.PNG" />
+  </ItemGroup>
+
 </Project>
